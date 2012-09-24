@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			// Relativer oder Absoluter Pfad zum Repo
+			// Einfacher ist der Relative Pfad (also /) da dies die Zusammenarbeit vereinfacht
+			"path": "/"
+		}
+	],
+	"settings":
+	{
+		// Relativer Pfad zum Mainfile
+		"TEXroot" : "HowTo.tex"
+	}
+}
