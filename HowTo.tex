@@ -1,27 +1,52 @@
 % KOMA-Script (http://tug.ctan.org/pkg/koma-script)
 \documentclass[
 	titlepage=true % Titel (\maketitle) auf einer eigenen Seite
-]{scrartcl} 
+]{scrartcl}
 
 \usepackage[utf8]{inputenc} % UTF-8 unterstützung
 \usepackage[ngerman]{babel} % Silbentrennung
+\usepackage[automark]{scrpage2} % Header und Footer
+
 
 \titlehead{}
 \subject{}
 \title{HowTo}
 \subtitle{Anleitung für Zusammenfassungen an der HSR}
-\author{J. Rast \& DIE Schweisser}
+\author{HSR-Stud}
 \date{\today}
+
+
+% Capture title and author
+\makeatletter
+\let\Title\@title
+\let\Author\@author
+\makeatother
+
+\deftripstyle{bericht}[0pt][0.5pt]
+	{\Title}	% Kopfzeile innen
+	{\headmark}	% Kopfzeile mitte
+	{\pagemark}	% Kopfzeile aussen
+	{\Author}	% Fusszeile innen
+	{}			% Fusszeile mitte
+	{\today}	% Fusszeile aussen
+
+\pagestyle{bericht}
+
+%\areaset{190mm}{250mm}
 
 
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+	\thispagestyle{empty}
+	\maketitle	
+\end{titlepage}
+
 \tableofcontents
 \newpage
 
-\pagestyle{headings}
+
 
 \include{sections/Vorbereitung}
 \section{Anwendung}
