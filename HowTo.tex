@@ -1,5 +1,29 @@
-\documentclass{article}
+% KOMA-Script (http://tug.ctan.org/pkg/koma-script)
+\documentclass[
+	titlepage=true % Titel (\maketitle) auf einer eigenen Seite
+]{scrartcl} 
+
+\usepackage[utf8]{inputenc} % UTF-8 unterstützung
+\usepackage[ngerman]{babel} % Silbentrennung
+
+\titlehead{}
+\subject{}
+\title{HowTo}
+\subtitle{Anleitung für Zusammenfassungen an der HSR}
+\author{J. Rast \& DIE Schweisser}
+\date{\today}
+
+
+
 \begin{document}
-\section{Bluber}
-Test
+
+\maketitle
+\tableofcontents
+\newpage
+
+\pagestyle{headings}
+
+\include{sections/Vorbereitung}
+\section{Anwendung}
+
 \end{document}
