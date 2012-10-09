@@ -19,7 +19,7 @@
 *.pdfsync
 *.ps
 *.snm
-*.synctex.*
+*.synctex*
 *.toc
 *.vrb
 *.maf
