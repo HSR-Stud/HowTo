@@ -1,0 +1,39 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Makros & anderer Low-Level bastel %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+%% Makros für Titel, Autor und Datum 
+\def\@Title{}
+\def\@Author{}
+\def\@Date{\today}
+\newcommand{\Title}{\@Title}
+\newcommand{\Author}{\@Author}
+\newcommand{\Date}{\@Date}
+\AtBeginDocument{%
+  \let\@Title\@title
+  \let\@Author\@author
+  \let\@Date\@date
+}
+\makeatother
+
+
+%%%%%%%%%%%%%%
+%% Packages %%
+%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc} % UTF-8 unterstützung
+\usepackage[ngerman]{babel} % Silbentrennung
+\usepackage[automark]{scrpage2} % Header und Footer
+\usepackage{listings}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Layout der Kopf und Fusszeile %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\deftripstyle{bericht}[0pt][0.5pt]
+	{\Title}	% Kopfzeile innen
+	{\headmark}	% Kopfzeile mitte
+	{\pagemark}	% Kopfzeile aussen
+	{\Author}	% Fusszeile innen
+	{}			% Fusszeile mitte
+	{\Date}	% Fusszeile aussen
+\pagestyle{bericht}

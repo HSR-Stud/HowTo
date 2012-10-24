@@ -1,43 +1,22 @@
+\RequirePackage[l2tabu, orthodox]{nag}
 % KOMA-Script (http://tug.ctan.org/pkg/koma-script)
-\documentclass[
-	titlepage=true % Titel (\maketitle) auf einer eigenen Seite
-]{scrartcl}
+\documentclass[titlepage=true]{scrartcl}
 
-\usepackage[utf8]{inputenc} % UTF-8 unterstützung
-\usepackage[ngerman]{babel} % Silbentrennung
-\usepackage[automark]{scrpage2} % Header und Footer
+\input{header/header}
+\input{header/hsrColors}
+\input{header/hypersetup}
 
+\input{header/tikz}
 
-\titlehead{}
-\subject{}
 \title{HowTo}
 \subtitle{Anleitung für Zusammenfassungen an der HSR}
 \author{HSR-Stud}
 \date{\today}
 
-
-% Capture title and author
-\makeatletter
-\let\Title\@title
-\let\Author\@author
-\makeatother
-
-\deftripstyle{bericht}[0pt][0.5pt]
-	{\Title}	% Kopfzeile innen
-	{\headmark}	% Kopfzeile mitte
-	{\pagemark}	% Kopfzeile aussen
-	{\Author}	% Fusszeile innen
-	{}			% Fusszeile mitte
-	{\today}	% Fusszeile aussen
-
-\pagestyle{bericht}
-
 % Seitenränder für Formelsammlungen
 %\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
 
 \begin{document}
-
-
 \begin{titlepage}
 	\thispagestyle{empty}
 	\maketitle	
@@ -45,8 +24,6 @@
 
 \tableofcontents
 \newpage
-
-
 
 \include{Sections/Vorbereitung}
 \include{Sections/Anwendung}

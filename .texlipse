@@ -1,12 +1,12 @@
 #TeXlipse project settings
-#Mon Sep 24 18:42:47 CEST 2012
+#Tue Oct 16 21:59:55 CEST 2012
 markTmpDer=false
 builderNum=2
 outputDir=
 makeIndSty=
 bibrefDir=
 outputFormat=pdf
-tempDir=Temp/
+tempDir=temp/
 mainTexFile=HowTo.tex
 outputFile=HowTo.pdf
 langSpell=de
