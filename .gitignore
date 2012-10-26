@@ -25,5 +25,7 @@
 *.maf
 *.mtc
 *.mtc0
+*.fls
 /*.pdf
 *.sublime-workspace
+revision.tex
