@@ -16,6 +16,19 @@
   \let\@Author\@author
   \let\@Date\@date
 }
+
+%% Makros für den Arraystretch (bei uns meist in Tabellen genutzt, welche Formeln enthalten)
+% Default Value
+\def\@ArrayStretchDefault{1} % Entspricht der Voreinstellung von Latex
+
+% Setzt einen neuen Wert für den arraystretch
+\newcommand{\setArrayStretch}[1]{\renewcommand{\arraystretch}{#1}}
+
+% Setzt den arraystretch zurück auf den default wert
+\newcommand{\resetArrayStretch}{\renewcommand{\arraystretch}{\@ArrayStretchDefault}}
+
+% Makro zum setzten des Default arraystretch. Kann nur in der Präambel verwendet werden.
+\newcommand{\setDefaultArrayStretch}[1]{\AtBeginDocument{\def\@ArrayStretchDefault{#1}\renewcommand{\arraystretch}{#1}}}
 \makeatother
 
 
