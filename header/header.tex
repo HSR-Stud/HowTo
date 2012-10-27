@@ -27,8 +27,8 @@
 % Setzt den arraystretch zurück auf den default wert
 \newcommand{\resetArrayStretch}{\renewcommand{\arraystretch}{\@ArrayStretchDefault}}
 
-% Makro zum setzten des Default arraystretch. Kann nur in der Präambel verwendet werden.
-\newcommand{\setDefaultArrayStretch}[1]{\AtBeginDocument{\def\@ArrayStretchDefault{#1}\renewcommand{\arraystretch}{#1}}}
+% Makro zum setzten des Default arraystretch. Sollte nur in der Präambel verwendet werden.
+\newcommand{\setDefaultArrayStretch}[1]{\def\@ArrayStretchDefault{#1}\renewcommand{\arraystretch}{#1}}
 \makeatother
 
 
