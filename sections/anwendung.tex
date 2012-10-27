@@ -13,7 +13,7 @@ Der Dateiname sollte möglichst dem Titel des Kapitels entsprechen. Bilder und G
 \verb+tikz+ Ordner abgelegt.
 
 \begin{figure}[h]
-\begin{center}
+\centering
   \begin{tikzpicture}[%
 	grow via three points={one child at (0.5, -0.8) and
 	two children at(0.5,-0.8) and (0.5, -1.6)},
@@ -31,7 +31,6 @@ Der Dateiname sollte möglichst dem Titel des Kapitels entsprechen. Bilder und G
   \end{tikzpicture}
   \caption[Ordner und Dateistruktur]{Ordner und Dateistruktur für neue Projekte}
   \label{fig:OrdnerDatei}
-\end{center}
 \end{figure}
 
 Weitere Dateien im Hauptverzeichnis, welche in Abbildung \ref{fig:OrdnerDatei} nicht ersichtlich sind:
@@ -65,6 +64,10 @@ Die deutschsprachige Version als PDF findet sich hier:
 \url{http://mirror.switch.ch/ftp/mirror/tex/info/l2tabu/german/l2tabu.pdf}
 
 \subsection{Code Snippets}
+Best Practice: Dieser \href{http://stackoverflow.com/questions/193298/best-practices-in-latex}{Link}\footnote{\url{http://stackoverflow.com/questions/193298/best-practices-in-latex}} 
+beinhaltet einige Hinweise und Tipps
+
+\subsubsection{Listings}
 Das Listings\footnote{\url{http://www.ctan.org/pkg/listings}} Paket bietet Support für über 80 Programmiersprachen, dazu kommen für verschiedene Sprachen noch diverse Dialekte. Sollte das nicht
 ausreichen lässt sich relativ leicht eine neue Sprache definieren.
 
@@ -102,5 +105,19 @@ Bilder in Tabellen: \url{http://www.ctan.org/pkg/adjustbox}
 
 
 \subsubsection{Formeln}
+\paragraph{Inline Formeln}
+sind sehr praktisch wenn es nur darum geht etwas kurzes zu beschreiben oder einen Teil
+einer anderen Formel zu erläutern. Zum Beispiel kann der Satz von Phytagoras so aussehen: $c^2 = a^2 + b^2$. Er kann jedoch auch
+umgeformt werden und sieht dann so aus: $c=\sqrt{a^2 + b^2}$
+
+\paragraph{Sonstige Formeln}
+können mit den verschiedensten Umgebungen dargestellt werden. Am besten einfach in die Anleitungen der beiden Mathe-Packages
+\href{http://www.ctan.org/pkg/amsmath}{amsmath}\footnote{\url{http://www.ctan.org/pkg/amsmath}} und 
+\href{http://www.ctan.org/pkg/mathtools}{mathtools}\footnote{\url{http://www.ctan.org/pkg/mathtools}} schauen!
+Einfache Formeln welche keine spezielle Umgebung benötigen sollten mit \verb+\[...\]+ geschrieben und nicht mit
+\verb+$$...$$+. Die Form mit den Dollarzeichen hat zum Teil nicht erwünschte Nebeneffekte.
+Folgendes Dokument ist nebst den Package-Dokumentationen auch lesenswert: 
+\href{http://www.ctan.org/pkg/voss-mathmode}{Mathmode}\footnote{\url{http://www.ctan.org/pkg/voss-mathmode}}
+
 \subsubsection{Tabellen}
 \url{http://www.ctan.org/pkg/tabularx}
