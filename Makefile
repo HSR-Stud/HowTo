@@ -1,3 +1,4 @@
+SHELL=bash
 TARGET=HowTo.pdf
 LL=latexmk -pdf
 CLEAN=latexmk -C
@@ -25,3 +26,5 @@ refresh:
 
 mupdf:
 	mupdf $(TARGET) &
+
+# vim: set tabstop=4 shiftwidth=4 noexpandtab:
