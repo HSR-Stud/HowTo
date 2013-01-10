@@ -1,21 +1,24 @@
 \RequirePackage[l2tabu, orthodox]{nag}
-% KOMA-Script (http://tug.ctan.org/pkg/koma-script)
-\documentclass[titlepage=true]{scrartcl}
 
+% KOMA-Script (http://tug.ctan.org/pkg/koma-script)
+\documentclass[titlepage=true,parskip]{scrartcl}
+
+% General header rules
 \input{header/header}
 \input{header/hsrColors}
 \input{header/hyperref}
 \input{header/mathe}
 \input{header/tikz}
 
+% Adjust paragraph spacing
+\setlength{\parskip}{5mm plus4mm minus3mm}
+
+% Adjust arraystretch
 \setDefaultArrayStretch{1.5}
 
 \title{HowTo}
 \subtitle{Anleitung für Zusammenfassungen an der HSR}
 \author{HSR-Stud}
-
-% Seitenränder für Formelsammlungen
-%\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
 
 \begin{document}
 \begin{titlepage}
@@ -26,6 +29,7 @@
 \tableofcontents
 \newpage
 
+\input{sections/vorgaben}
 \input{sections/vorbereitung}
 \input{sections/anwendung}
 \input{sections/packages}
